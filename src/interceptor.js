@@ -1,4 +1,5 @@
-const ah = require('ajax-hook')
+import  "./ajaxhook.min.js";
+// import { proxy } from "ajax-hook";
 ah.proxy({
   //请求发起前进入
   onRequest: (config, handler) => {

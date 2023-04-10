@@ -2,6 +2,7 @@
   "name": "extension-demo-2",
   "displayName": "Extension demo 2",
   "version": "0.0.1",
+  "type": "module",
   "description": "A basic Plasmo extension.",
   "author": "Plasmo Corp. <foss@plasmo.com>",
   "scripts": {
@@ -25,25 +26,27 @@
     "typescript": "5.0.3"
   },
   "manifest": {
-    "host_permissions": [
-      "https://*/*"
-    ],
+   
     "web_accessible_resources": [
       {
         "resources": [
-          "interceptor.js"
+          "interceptor.js",
+          "ajaxhook.min.js"
         ],
         "matches": [
           "<all_urls>"
         ]
       }
     ],
+  
     "permissions": [
+      "scripting",
       "storage",
       "tabs",
       "webRequest",
       "activeTab",
       "unlimitedStorage"
-    ]
+    ],
+    "host_permissions": ["*://*/"]
   }
 }
